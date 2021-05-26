@@ -14,10 +14,16 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'ransack'
 gem 'rack-cors'
 
-gem 'devise', '~> 4.8'
+
+gem 'jbuilder', '~> 2.10.1'
+gem 'devise_token_auth', '~> 1.1.4'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'rspec-rails', '~> 4.0.1'
+  gem 'shoulda-matchers', '~> 4.0'
 end
 
 group :development do
