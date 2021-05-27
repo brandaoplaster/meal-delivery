@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2021_05_27_011425) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "rastaurants", force: :cascade do |t|
+  create_table "restaurants", force: :cascade do |t|
     t.string "name"
     t.text "description"
     t.float "delivery_tax"
@@ -33,8 +33,8 @@ ActiveRecord::Schema.define(version: 2021_05_27_011425) do
     t.bigint "category_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["category_id"], name: "index_rastaurants_on_category_id"
+    t.index ["category_id"], name: "index_restaurants_on_category_id"
   end
 
-  add_foreign_key "rastaurants", "categories"
+  add_foreign_key "restaurants", "categories"
 end

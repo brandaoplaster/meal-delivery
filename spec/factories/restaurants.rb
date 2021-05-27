@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :rastaurant do
+  factory :restaurant do
     sequence(:name) { |n| "Rastaurant #{n}" }
     description { Faker::Lorem.paragraph }
     delivery_tax { Faker::Commmerce.price(range: 1.0..10.0) }
